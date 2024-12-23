@@ -1,13 +1,13 @@
 # Web Application - Binary (Mahasiswa Informatika)
 
-Proyek ini adalah aplikasi web buat manajemen mahasiswa dan sistem login. Aplikasinya punya fitur registrasi dan login pengguna, plus dashboard simpel buat pengguna yang udah login.
+Proyek ini adalah aplikasi web buat manajemen mahasiswa dan sistem login. Aplikasinya punya fitur registrasi dan login User, plus dashboard simpel buat User yang udah login.
 
 ## Fitur Aplikasi
 
-- **Registrasi Pengguna**: Pengguna bisa bikin akun dengan ngisi nama, username, tanggal lahir, jenis kelamin, nomor HP, email, dan password.
-- **Login Pengguna**: Pengguna yang udah punya akun bisa login pake username/email sama password.
-- **Dashboard Pengguna**: Setelah berhasil login, pengguna langsung diarahkan ke dashboard yang nampilin daftar pengguna dari database.
-- **Logout Pengguna**: Pengguna bisa keluar dari aplikasi dan balik ke halaman utama.
+- **Registrasi User**: User bisa bikin akun dengan ngisi nama, username, tanggal lahir, jenis kelamin, nomor HP, email, dan password.
+- **Login User**: User yang udah punya akun bisa login pake username/email sama password.
+- **Dashboard User**: Setelah berhasil login, User langsung diarahkan ke dashboard yang nampilin daftar User dari database.
+- **Logout User**: User bisa keluar dari aplikasi dan balik ke halaman utama.
 
 ---
 
@@ -28,7 +28,7 @@ Proyek ini adalah aplikasi web buat manajemen mahasiswa dan sistem login. Aplika
      ```
    - Hubungkan repository lokal ke GitHub dan push kode:
      ```bash
-     git remote add origin <your-repository-url>
+     git remote add origin https://github.com/dhianadi55/BINARY-21.git
      git push -u origin master
      ```
 4. **Aktifkan GitHub Pages**: Di pengaturan repository GitHub, aktifkan GitHub Pages buat nampilin file `index.html` sebagai halaman utama.
@@ -36,43 +36,44 @@ Proyek ini adalah aplikasi web buat manajemen mahasiswa dan sistem login. Aplika
 
 ---
 
+## Catatan Hosting dan Keamanan
+
 ## Rekomendasi Hosting
 
-Hosting yang paling cocok buat aplikasi ini adalah **GitHub Pages** karena:
+Hosting yang paling cocok dipake buat developer pemula seperti saya dalam membuat aplikasi ini adalah **GitHub Pages** karena:
 
 - Gratis buat hosting konten statis (HTML, CSS, JavaScript).
 - Setup-nya gampang banget.
 - HTTPS otomatis buat koneksi aman.
 
-GitHub Pages pas banget buat aplikasi statis yang nggak butuh backend atau database.
-
 ---
 
-## Tips Biar Aplikasi Kamu Aman
+## Keamanan Aplikasi Web
 
 Biar aplikasi web kamu lebih aman waktu di-host di GitHub Pages, perhatiin langkah-langkah ini:
 
-1. **HTTPS**: GitHub Pages otomatis nyediain HTTPS, jadi komunikasi antara pengguna sama server aman.
-2. **Validasi Input Pengguna**: Pastikan semua input pengguna tervalidasi biar nggak ada celah kayak Cross-Site Scripting (XSS). Misalnya, pake `htmlspecialchars()` buat mencegah serangan XSS.
-3. **Manajemen Sesi**: Kelola sesi pengguna dengan baik. Pengguna yang belum login diarahkan ke halaman login, sedangkan yang udah login diarahkan ke dashboard.
+1. **HTTPS**: GitHub Pages otomatis nyediain HTTPS, jadi komunikasi antara User sama server aman (enkripsi data yang dikirim).
+2. **Validasi Input User**: Pastikan semua input User tervalidasi biar nggak ada celah kayak Cross-Site Scripting (XSS) atau SQL Injection. Misalnya, pake `htmlspecialchars()` buat mencegah serangan XSS.
+3. **Manajemen Sesi**: Kelola sesi User dengan baik. User yang belum login diarahkan ke halaman login, sedangkan yang udah login diarahkan ke dashboard. Bisa juga kayak nentuin session timeout atau pake setting `session.cookie_secure` biar sesi cuma jalan lewat HTTPS.
 
 ---
 
-## Konfigurasi Server yang Diperlukan
+## 3. Konfigurasi Server yang Diperlukan
 
 Karena aplikasi ini di-host pake GitHub Pages (platform hosting statis), konfigurasi server yang ribet nggak dibutuhin. Yang perlu diperhatiin:
 
-- **HTTPS Otomatis**: GitHub Pages nyediain HTTPS buat ngamanin data yang ditransfer.
-- **CDN (Content Delivery Network)**: GitHub Pages pake CDN buat ngasih konten lebih cepat dan ningkatin waktu muat aplikasi.
-- **Tanpa Konfigurasi Server-Side**: Aplikasi ini nggak butuh processing di sisi server atau database. Kalau nanti aplikasinya berkembang dan butuh fitur backend, kamu bisa coba hosting lain kayak Heroku, Netlify, atau AWS.
+- **HTTPS Otomatis**: GitHub Pages nyediain HTTPS buat ngamanin data yang ditransfer (Aktif Otomatis).
+- **CDN (Content Delivery Network)**: GitHub Pages pake CDN buat ngasih konten lebih cepat dan ningkatin waktu muat aplikasi (Aktif Otomatis).
+- **Pastikan file statis (CSS, JS, gambar) diatur dengan baik dan bisa diakses browser.
+- **Tanpa Konfigurasi Server-Side**: Aplikasi ini nggak butuh processing di sisi server atau database. Kalau nanti aplikasinya berkembang dan butuh fitur backend bisa coba hosting di Heroku, Netlify, atau AWS.
 
 ---
 
 ## Teknologi yang Dipake
 
 - **Frontend**: HTML, CSS, JavaScript
-- **Backend**: PHP (buat login dan registrasi pengguna)
-- **Database**: MySQL (buat nyimpen data pengguna)
+- **Backend**: PHP (buat login dan registrasi User)
+- **Database**: MySQL (buat nyimpen data User)
 - **Hosting**: GitHub Pages (buat file statis)
 
 ---
@@ -81,7 +82,7 @@ Karena aplikasi ini di-host pake GitHub Pages (platform hosting statis), konfigu
 
 1. **Clone Repository**:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/dhianadi55/BINARY-21.git
    ```
 2. **Setup Database**:
    - Import file SQL buat bikin database `binary_db` dan tabel `users`.
@@ -105,25 +106,10 @@ Karena aplikasi ini di-host pake GitHub Pages (platform hosting statis), konfigu
      ```
    - Hubungkan repository dan push kode:
      ```bash
-     git remote add origin <repository-url>
+     git remote add origin https://github.com/dhianadi55/BINARY-21.git
      git push -u origin master
      ```
 4. **Gunakan GitHub Pages (buat hosting statis)**: Aktifkan GitHub Pages dari pengaturan repository dan pilih branch yang berisi file utama aplikasi (biasanya `master` atau `main`).
 5. **Akses Aplikasi**: Aplikasi kamu bakal bisa diakses publik lewat URL GitHub Pages.
 
 ---
-
-## Catatan Hosting dan Keamanan
-
-1. **Rekomendasi Hosting**:
-   - **GitHub Pages** cocok banget buat aplikasi statis, gratis, ada HTTPS, dan gampang dipake buat developer pemula.
-
-2. **Tips Keamanan**:
-   - Pake HTTPS buat enkripsi data yang dikirim.
-   - Validasi input pengguna biar aman dari serangan XSS atau SQL Injection.
-   - Kelola sesi pengguna dengan baik, kayak nentuin session timeout atau pake setting `session.cookie_secure` biar sesi cuma jalan lewat HTTPS.
-
-3. **Konfigurasi Server**:
-   - Nggak perlu konfigurasi yang ribet di GitHub Pages.
-   - Fitur keamanan kayak HTTPS dan CDN udah aktif otomatis.
-   - Pastikan file statis (CSS, JS, gambar) diatur dengan baik dan bisa diakses browser.
