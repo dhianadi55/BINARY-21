@@ -13,11 +13,11 @@ Proyek ini adalah aplikasi web buat manajemen mahasiswa dan sistem login. Aplika
 
 ## Cara Host Aplikasi Web di GitHub Pages
 
-1. **Persiapkan Aplikasi Web Kamu**: Pastikan aplikasimu jalan lancar di komputer lokal.
+1. **Persiapkan Aplikasi Web **: Pastikan aplikasimu jalan lancar di komputer lokal.
 2. **Buat Repository di GitHub**: Bikin repository baru di GitHub buat nyimpen kode aplikasi.
 3. **Push Kode ke GitHub**:
 
-   - Inisialisasi Git di folder proyek kamu:
+   - Inisialisasi Git di folder proyek :
      ```bash
      git init
      ```
@@ -32,7 +32,7 @@ Proyek ini adalah aplikasi web buat manajemen mahasiswa dan sistem login. Aplika
      git push -u origin master
      ```
 4. **Aktifkan GitHub Pages**: Di pengaturan repository GitHub, aktifkan GitHub Pages buat nampilin file `index.html` sebagai halaman utama.
-5. **Akses Aplikasi Kamu**: Sekarang aplikasi kamu bisa diakses lewat URL GitHub Pages yang disediain.
+5. **Akses Aplikasi **: Sekarang aplikasi  bisa diakses lewat URL GitHub Pages yang disediain.
 
 ---
 
@@ -50,7 +50,7 @@ Hosting yang paling cocok dipake buat developer pemula seperti saya dalam membua
 
 ## 2.  Keamanan Aplikasi Web
 
-Biar aplikasi web kamu lebih aman waktu di-host di GitHub Pages, perhatiin langkah-langkah ini:
+Biar aplikasi web  lebih aman waktu di-host di GitHub Pages, perhatiin langkah-langkah ini:
 
 1. **HTTPS**: GitHub Pages otomatis nyediain HTTPS, jadi komunikasi antara User sama server aman (enkripsi data yang dikirim).
 2. **Validasi Input User**: Pastikan semua input User tervalidasi biar nggak ada celah kayak Cross-Site Scripting (XSS) atau SQL Injection. Misalnya, pake `htmlspecialchars()` buat mencegah serangan XSS.
@@ -89,7 +89,7 @@ Gunakan php version untuk penggunaan lokal.
 2. **Setup Database**:
    - Import file SQL buat bikin database `binary_db` dan tabel `users`.
 3. **Konfigurasi Koneksi Database**:
-   - Update konfigurasi database di `db_connection.php` sesuai pengaturan database lokal kamu.
+   - Update konfigurasi database di `db_connection.php` sesuai pengaturan database lokal .
 4. **Jalankan Aplikasi**:
    - Aplikasi bisa dijalankan di server lokal pake PHP atau di-host di GitHub Pages.
 
@@ -112,6 +112,6 @@ Gunakan php version untuk penggunaan lokal.
      git push -u origin master
      ```
 4. **Gunakan GitHub Pages (buat hosting statis)**: Aktifkan GitHub Pages dari pengaturan repository dan pilih branch yang berisi file utama aplikasi (biasanya `master` atau `main`).
-5. **Akses Aplikasi**: Aplikasi kamu bakal bisa diakses publik lewat URL GitHub Pages.
+5. **Akses Aplikasi**: Aplikasi  bakal bisa diakses publik lewat URL GitHub Pages.
 
 ---
