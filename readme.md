@@ -34,6 +34,11 @@ Proyek ini adalah aplikasi web buat manajemen mahasiswa dan sistem login. Aplika
 4. **Aktifkan GitHub Pages**: Di pengaturan repository GitHub, aktifkan GitHub Pages buat nampilin file `index.html` sebagai halaman utama.
 5. **Akses Aplikasi **: Sekarang aplikasi  bisa diakses lewat URL GitHub Pages yang disediain.
 
+Selain di GitHub, saya juga menghosting situs web saya di [https://dash.infinityfree.com/](https://dash.infinityfree.com/) dengan tautan [binary-21.infinityfreeapp.com](http://binary-21.infinityfreeapp.com).
+
+Host: InfinityFree  
+Website: binary-21.infinityfreeapp.com
+
 ---
 
 ## 1. Catatan Hosting dan Keamanan
