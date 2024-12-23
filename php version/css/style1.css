@@ -1,0 +1,163 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    color: #333;
+}
+
+/* Left Section Styling */
+.left-section {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.left-section img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Right Section Styling */
+.right-section {
+    width: 60%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.right-section h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.right-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.right-section button,
+.right-section a {
+    margin: 15px 0;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background: #00b4d8;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.right-section button:hover,
+.right-section a:hover {
+    background: #0077b6;
+}
+
+.right-section p {
+    font-size: 0.9rem;
+    margin-top: 20px;
+    line-height: 1.5;
+    font-style: italic;
+}
+
+/* Popup Styling */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    z-index: 1000;
+    text-align: left;
+}
+
+.popup form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.popup label {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.popup input,
+.popup select,
+.popup button {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.popup button {
+    background: #00b4d8;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s;
+}
+
+.popup button:hover {
+    background: #0077b6;
+}
+
+.popup .popup-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .left-section {
+        width: 100%;
+        height: 40vh;
+        box-shadow: none;
+    }
+
+    .right-section {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .popup {
+        width: 95%;
+    }
+}

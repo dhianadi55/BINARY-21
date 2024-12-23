@@ -1,0 +1,162 @@
+/* General Reset */
+body, h1, h2, p, a, form, input, button {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f7f7f7; /* Putih abu-abu lembut */
+    color: #333; /* Abu-abu gelap untuk teks */
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Layout Sections */
+.left-section {
+    flex: 1;
+    background-color: #222; /* Hitam elegan */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-section img {
+    max-width: 80%;
+    height: auto;
+    border: 5px solid #c0c0c0; /* Abu-abu retro */
+    border-radius: 10px;
+}
+
+.right-section {
+    flex: 1.2;
+    background-color: #fff;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #c7e957; /* Hijau lemon */
+}
+
+.right-section h1 {
+    color: #222; /* Hitam pekat */
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.right-section h2 {
+    color: #555; /* Abu-abu */
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.right-section button {
+    background-color: #c7e957; /* Hijau lemon */
+    color: #222;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.right-section button:hover {
+    background-color: #a3c645; /* Hijau lemon lebih gelap */
+}
+
+.right-section p {
+    font-size: 0.9rem;
+    color: #777; /* Abu-abu terang */
+    margin-bottom: 15px;
+}
+
+.right-section a {
+    color: #c7e957;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.right-section a:hover {
+    color: #a3c645;
+}
+
+/* Popups */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Latar belakang semi-transparan */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup form {
+    background-color: #fff;
+    padding: 20px;
+    width: 400px;
+    max-width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.popup label {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.popup input, .popup select, .popup button {
+    padding: 10px;
+    border: 1px solid #c7c7c7;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    width: 100%;
+}
+
+.popup input:focus, .popup select:focus {
+    outline: 2px solid #c7e957; /* Hijau lemon */
+}
+
+.popup button {
+    background-color: #222;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.popup button:hover {
+    background-color: #444;
+}
+
+.popup .popup-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: transparent;
+    border: none;
+    color: #333;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.popup .popup-close:hover {
+    color: #c7e957;
+}

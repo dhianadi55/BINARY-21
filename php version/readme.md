@@ -36,7 +36,7 @@ Proyek ini adalah aplikasi web buat manajemen mahasiswa dan sistem login. Aplika
 
 ---
 
-## 1. Catatan Hosting dan Keamanan
+## Catatan Hosting dan Keamanan
 
 ## Rekomendasi Hosting
 
@@ -48,7 +48,7 @@ Hosting yang paling cocok dipake buat developer pemula seperti saya dalam membua
 
 ---
 
-## 2.  Keamanan Aplikasi Web
+## Keamanan Aplikasi Web
 
 Biar aplikasi web kamu lebih aman waktu di-host di GitHub Pages, perhatiin langkah-langkah ini:
 
@@ -79,8 +79,6 @@ Karena aplikasi ini di-host pake GitHub Pages (platform hosting statis), konfigu
 ---
 
 ## Instalasi dan Cara Pakai
-
-Gunakan php version untuk penggunaan lokal.
 
 1. **Clone Repository**:
    ```bash
