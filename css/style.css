@@ -1,0 +1,165 @@
+/* Reset Umum: Mengatur ulang margin, padding, font, dan box model untuk elemen HTML */
+body, h1, h2, p, a, form, input, button {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Gaya Dasar Body */
+body {
+    background-color: #f7f7f7; /* Latar belakang putih abu-abu lembut */
+    color: #333; /* Warna teks abu-abu gelap */
+    margin: 0;
+    display: flex; /* Menggunakan flexbox untuk tata letak */
+    height: 100vh; /* Tinggi layar penuh */
+    justify-content: center; /* Memusatkan secara horizontal */
+    align-items: center; /* Memusatkan secara vertikal */
+}
+
+/* Bagian Kiri */
+.left-section {
+    flex: 1; /* Membagi ruang fleksibel */
+    background-color: #222; /* Latar belakang hitam elegan */
+    color: #fff; /* Warna teks putih */
+    display: flex;
+    justify-content: center; /* Pusatkan konten secara horizontal */
+    align-items: center; /* Pusatkan konten secara vertikal */
+}
+
+.left-section img {
+    width: 20%; /* Lebar gambar 20% dari container */
+    height: 20%; /* Tinggi gambar 20% dari container */
+    border: 5px solid #c0c0c0; /* Border abu-abu retro */
+    border-radius: 10px; /* Sudut melengkung */
+}
+
+/* Bagian Kanan */
+.right-section {
+    flex: 1.2; /* Memberikan ruang lebih besar dibanding bagian kiri */
+    background-color: #fff; /* Latar belakang putih */
+    padding: 30px; /* Padding dalam */
+    display: flex;
+    flex-direction: column; /* Susun elemen secara vertikal */
+    justify-content: center; /* Pusatkan konten secara vertikal */
+    align-items: flex-start; /* Ratakan konten ke kiri */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Bayangan lembut */
+    border-left: 5px solid #c7e957; /* Garis hijau lemon di kiri */
+}
+
+.right-section h1 {
+    color: #222; /* Warna teks hitam pekat */
+    font-size: 3rem; /* Ukuran besar untuk judul */
+    margin-bottom: 10px; /* Spasi bawah */
+}
+
+.right-section h2 {
+    color: #555; /* Warna teks abu-abu */
+    font-size: 1.5rem; /* Ukuran sedang */
+    margin-bottom: 20px;
+}
+
+.right-section button {
+    background-color: #c7e957; /* Warna hijau lemon */
+    color: #222; /* Teks hitam */
+    padding: 10px 20px; /* Padding tombol */
+    border: none; /* Tanpa border */
+    border-radius: 5px; /* Sudut tombol melengkung */
+    font-size: 1rem; /* Ukuran font tombol */
+    cursor: pointer; /* Pointer saat hover */
+    margin-bottom: 15px; /* Spasi bawah */
+    transition: all 0.3s ease; /* Efek transisi */
+}
+
+.right-section button:hover {
+    background-color: #a3c645; /* Warna hijau lebih gelap saat hover */
+}
+
+.right-section p {
+    font-size: 0.9rem; /* Ukuran teks kecil */
+    color: #777; /* Warna abu-abu terang */
+    margin-bottom: 15px; /* Spasi bawah */
+}
+
+.right-section a {
+    color: #c7e957; /* Warna hijau lemon */
+    font-size: 0.9rem; /* Ukuran kecil */
+    text-decoration: none; /* Tanpa garis bawah */
+    transition: all 0.3s ease; /* Efek transisi */
+}
+
+.right-section a:hover {
+    color: #a3c645; /* Warna hijau lebih gelap saat hover */
+}
+
+/* Gaya Popup */
+.popup {
+    font-size: xx-small; /* Ukuran font sangat kecil */
+    display: none; /* Tidak ditampilkan secara default */
+    position: fixed; /* Posisi tetap pada layar */
+    top: 50%; /* Posisikan di tengah vertikal */
+    left: 50%; /* Posisikan di tengah horizontal */
+    transform: translate(-50%, -50%); /* Sesuaikan ke tengah */
+    background: white; /* Latar belakang putih */
+    width: 60%; /* Lebar popup */
+    max-width: 300px; /* Lebar maksimal */
+    border-radius: 5px; /* Sudut melengkung */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* Bayangan lembut */
+    padding: 20px; /* Padding dalam */
+    z-index: 1000; /* Tampilkan di atas elemen lain */
+    text-align: left; /* Rata kiri */
+}
+
+.popup form {
+    display: flex;
+    flex-direction: column; /* Elemen berurutan vertikal */
+    gap: 0.5px; /* Jarak antar elemen kecil */
+}
+
+.popup label {
+    font-size: 0.8rem; /* Ukuran font kecil */
+    color: #555; /* Warna abu-abu */
+    margin: 0; /* Tanpa margin */
+}
+
+.popup input, .popup select, .popup button {
+    padding: 5px; /* Padding kecil */
+    border: 1px solid #c7c7c7; /* Border abu-abu muda */
+    border-radius: 3px; /* Sudut melengkung kecil */
+    font-size: 0.8rem; /* Ukuran font kecil */
+    width: 100%; /* Lebar penuh */
+    margin: 0; /* Tanpa margin */
+}
+
+.popup input:focus, .popup select:focus {
+    outline: 2px solid #c7e957; /* Outline hijau lemon saat fokus */
+}
+
+.popup button {
+    background-color: #222; /* Latar belakang hitam */
+    color: #fff; /* Teks putih */
+    cursor: pointer; /* Pointer saat hover */
+    transition: all 0.3s ease; /* Efek transisi */
+    padding: 5px; /* Padding kecil */
+}
+
+.popup button:hover {
+    background-color: #444; /* Latar belakang abu-abu gelap saat hover */
+}
+
+.popup .popup-close {
+    position: absolute; /* Posisi mutlak */
+    top: 5px; /* Spasi kecil dari atas */
+    right: 5px; /* Spasi kecil dari kanan */
+    background-color: transparent; /* Tanpa latar belakang */
+    border: none; /* Tanpa border */
+    color: #333; /* Warna teks abu-abu gelap */
+    font-size: 1rem; /* Ukuran font sedang */
+    cursor: pointer; /* Pointer saat hover */
+    font-weight: bold; /* Teks tebal */
+    transition: all 0.3s ease; /* Efek transisi */
+}
+
+.popup .popup-close:hover {
+    color: #c7e957; /* Warna hijau lemon saat hover */
+}
